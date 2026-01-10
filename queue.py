@@ -9,7 +9,7 @@ class Queue:
     def is_empty(self):
         return len(self.items) == 0
     
-    def enque(self, item):
+    def enqueue(self, item):
         self.items.append(item)
         
     def dequeue(self):
@@ -18,3 +18,22 @@ class Queue:
         else:
             return "Queue is empty"
     
+    def peek(self):
+        if not self.is_empty():
+            return self.items[0]
+        else:
+            return "Queue is empty"
+    
+    def display(self):
+        print(self.items)
+        
+#performing some operations 
+q = Queue()
+q.enqueue(10)
+q.enqueue(20)
+q.enqueue(30)
+q.display()
+
+print(q.dequeue())
+print(q.peek())
+q.display()
