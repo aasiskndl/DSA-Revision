@@ -34,3 +34,8 @@ class LinkedList:
         print("None")
         
         
+l1 = LinkedList()
+l1.insert_end(10)
+l1.insert_end(20)
+l1.insert_end(30)
+l1.display()
