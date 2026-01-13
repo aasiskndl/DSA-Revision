@@ -44,3 +44,33 @@ preorder(root)
 
 print("\nPostorder Traversal")
 postorder(root)
+
+# to print tree level by level
+
+from collections import deque
+
+def level_order(root):
+    if not root:
+        return 
+    
+    q = deque([root])
+    
+    while q:
+        node = q.popleft()
+        print(node.data, end = " ")
+        
+        if node.left:
+            q.append(node.left)
+            
+        if node.right:
+            q.append(node.right)
+            
+print("\nLevel order Traversal: ")
+level_order(root)
+
+# this was the tree we made
+#        1
+#       / \
+#      2   3
+#     / \
+#    4   5
