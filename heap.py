@@ -2,7 +2,7 @@
 # min heap: parent node <= its children (smallest element is always at the root)
 # max heap: parent node >= its children  (largest element is always at the root)
 
-
+# implementation of min heap 
 import heapq
 
 heap = []
@@ -21,3 +21,14 @@ print("Min element: ", heap[0])
 # delete (remove min)
 print("Deleted element: ", heapq.heappop(heap))
 print("Heap after deletion: ", heap)
+
+
+#implementation of max heap
+# python does not have direct max heap, we negate the values
+
+max_heap = []
+heapq.heappush(max_heap, -10)
+heapq.heappush(max_heap, -40)
+heapq.heappush(max_heap, -20)
+
+print("Max element: ", -heapq.heappop(max_heap))
