@@ -24,12 +24,23 @@ def has_cycle(graph):
                 return True
     return False
 
+#graph with a cycle
+'''
 graph = {
     0: [1,2], 
     1: [0,2],
     2: [0,1],
     3: []
 }
+'''
+# graph without cycle
+graph = {
+    0: [1],
+    1: [0, 2],
+    2: [1],
+    3: []
+}
+
 
 if has_cycle(graph):
     print("Graph has a cycle")
