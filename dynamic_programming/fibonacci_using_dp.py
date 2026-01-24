@@ -16,5 +16,5 @@ def fib(n):
         
     return dp[n]
 
-print(fib(5))
+print(fib(6))
 
