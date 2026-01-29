@@ -8,3 +8,39 @@ goal is to generate all possible ordered arrangements (permutation) of a given s
 
 '''
 
+
+def permute(nums):
+    result = []
+    path = []
+    used = [False] * len(nums)
+    
+    def backtrack():
+        # if permutation is complete
+        if len(path) == len(nums):
+            result.append(path.copy())
+            return 
+        
+        for i in range(len(nums)):
+            if used[i]:
+                continue
+            
+            # choose
+            used[i] = True
+            path.append(nums[i])
+            
+            # explore
+            backtrack()
+            
+            # un-choose backtrack
+            path.pop()
+            used[i]
+    
+    backtrack()
+    return result
+
+nums = [4,5,6]
+ans = permute(nums)
+
+print("Permutations:")
+for p in ans:
+    print(p)
