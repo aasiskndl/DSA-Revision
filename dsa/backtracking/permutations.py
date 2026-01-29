@@ -33,7 +33,7 @@ def permute(nums):
             
             # un-choose backtrack
             path.pop()
-            used[i]
+            used[i] = False
     
     backtrack()
     return result
