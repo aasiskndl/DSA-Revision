@@ -2,7 +2,6 @@
 Docstring for dsa.sorting_algos.selection
 It organized a list by repeatedly finding the smallest element from the unsorted list.
 Time complexity: O(n^2)
-bhbj
 '''
 
 def selection_sort(arr):
