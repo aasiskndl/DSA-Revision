@@ -21,5 +21,5 @@ def insertion_sort(arr):
     return arr
 
 nums = [8,3,5,1,9,5]
-print("Expected result after sorting:", insertion_sort(nums.copy()))
+print("Result after sorting:", insertion_sort(nums.copy()))
 
