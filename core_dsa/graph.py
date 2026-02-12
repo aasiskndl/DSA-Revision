@@ -12,52 +12,47 @@
 from collections import deque
 
 # graph definition ( it is also called adjacency list: it defines both the nodes and the connections between them. )
-graph = {
-    0: [1,2],
-    1: [0,3,4],
-    2: [0],
-    3: [1],
-    4: [1]
-}
+graph = {0: [1, 2], 1: [0, 3, 4], 2: [0], 3: [1], 4: [1]}
 
 # bfs traversal in the graph
+
 
 def bfs(graph, start):
     visited = set()
     queue = deque([start])
     visited.add(start)
-    
-    print("BFS traversal: ", end= " ")
-    
+
+    print("BFS traversal: ", end=" ")
+
     while queue:
         node = queue.popleft()
-        print(node, end = " ")
-        
+        print(node, end=" ")
+
         for neighbour in graph[node]:
             if neighbour not in visited:
                 visited.add(neighbour)
                 queue.append(neighbour)
-                
-    print()
-    
 
-# dfs traversal in the graph 
+    print()
+
+
+# dfs traversal in the graph
 def dfs(graph, start, visited=None):
     if visited is None:
         visited = set()
-        
+
     visited.add(start)
-    print(start, end= " ")
-    
+    print(start, end=" ")
+
     for neighbour in graph[start]:
         if neighbour not in visited:
             dfs(graph, neighbour, visited)
-        
+
+
 print("Graph: ", graph)
 
 bfs(graph, 0)
 
-print("DFS traversal: ", end = " ")
-dfs(graph, 0 ) 
-print()   
-
+print("DFS traversal: ", end=" ")
+dfs(graph, 0)
+print()

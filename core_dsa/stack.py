@@ -1,6 +1,7 @@
 # stack is a linear data structure that uses last in first out principle
 # the last element pushed is the one that is popped out at first
 
+
 class Stack:
     def __init__(self):
         self.items = []
@@ -32,7 +33,7 @@ stack = Stack()
 stack.push(10)
 stack.push(20)
 stack.push(30)
-stack.display()        
-print(stack.pop()) 
+stack.display()
+print(stack.pop())
 print(stack.peek())
-stack.display()       
+stack.display()
