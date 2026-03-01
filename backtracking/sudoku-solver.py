@@ -1,4 +1,4 @@
-def solveSudoko(board):
+def solveSudoku(board):
     def is_valid(r, c, num):
         # check row
         for i in range(9):
@@ -47,7 +47,7 @@ board = [
  [".",".",".",".","8",".",".","7","9"]
 ]
 
-solveSudoko(board)
+solveSudoku(board)
 
 for row in board:
     print(row)
